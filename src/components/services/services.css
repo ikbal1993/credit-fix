@@ -1,0 +1,352 @@
+.services-page {
+  --services-navy: #102b50;
+  --services-blue: #1769aa;
+  --services-text: #263f58;
+  --services-muted: #607287;
+  min-height: 60vh;
+  padding: 56px 24px 76px;
+  background: linear-gradient(180deg, #f5fafe 0, #fff 360px);
+  color: var(--services-text);
+}
+
+.services-intro {
+  max-width: 690px;
+  margin: 0 auto 36px;
+  text-align: center;
+}
+
+.services-eyebrow {
+  margin: 0 0 10px;
+  color: var(--services-blue);
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.services-intro h1 {
+  margin: 0;
+  color: var(--services-navy);
+  font-size: clamp(2rem, 4.5vw, 3.1rem);
+  letter-spacing: -0.045em;
+  line-height: 1.15;
+}
+
+.services-intro > p:last-child {
+  margin: 14px 0 0;
+  color: var(--services-muted);
+  font-size: 0.98rem;
+  line-height: 1.7;
+}
+
+.services-grid {
+  display: grid;
+  width: min(940px, 100%);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 22px;
+  margin: 0 auto;
+}
+
+.service-card {
+  display: flex;
+  min-height: 300px;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 29px;
+  border: 1px solid #e1eaf1;
+  border-radius: 13px;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(16, 43, 80, 0.06);
+  transition: box-shadow 180ms ease, transform 180ms ease;
+}
+
+.service-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 34px rgba(16, 43, 80, 0.1);
+}
+
+.service-card-icon {
+  display: grid;
+  width: 40px;
+  height: 40px;
+  place-items: center;
+  border-radius: 10px;
+  background: #eaf5fc;
+  color: var(--services-blue);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.service-card-icon-business {
+  background: #eef3fa;
+  color: #355d87;
+}
+
+.service-card h2 {
+  margin: 19px 0 0;
+  color: var(--services-navy);
+  font-size: 1.3rem;
+  letter-spacing: -0.025em;
+}
+
+.service-card > p {
+  flex: 1;
+  margin: 11px 0 23px;
+  color: var(--services-muted);
+  font-size: 0.91rem;
+  line-height: 1.75;
+}
+
+.service-button {
+  display: inline-flex;
+  min-height: 46px;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 0 16px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: var(--services-blue);
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 650;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 160ms ease, transform 160ms ease;
+}
+
+.service-button:hover:not(:disabled) {
+  transform: translateY(-1px);
+  background: #12558c;
+}
+
+.service-button:focus-visible,
+.services-modal-close:focus-visible {
+  outline: 3px solid #83c4ee;
+  outline-offset: 3px;
+}
+
+.service-button-secondary {
+  border-color: #cbdce9;
+ background: var(--services-blue);
+  color: #fff;
+}
+
+.service-button-secondary:hover {
+  background: #f0f7fb;
+  color: #fff;
+}
+
+.services-modal-overlay {
+  position: fixed;
+  z-index: 2000;
+  inset: 0;
+  display: grid;
+  overflow-y: auto;
+  padding: 20px;
+  place-items: center;
+  background: rgba(8, 28, 48, 0.68);
+  backdrop-filter: blur(4px);
+}
+
+.services-modal {
+  width: min(100%, 590px);
+  max-height: 92vh;
+  overflow-y: auto;
+  padding: 28px;
+  border: 1px solid #e1eaf1;
+  border-radius: 15px;
+  background: #fff;
+  box-shadow: 0 24px 70px rgba(5, 24, 43, 0.28);
+}
+
+.services-modal-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 15px;
+}
+
+.services-modal-header h2 {
+  margin: 0;
+  color: var(--services-navy);
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  letter-spacing: -0.035em;
+}
+
+.services-modal-close {
+  display: grid;
+  width: 36px;
+  height: 36px;
+  flex: 0 0 auto;
+  place-items: center;
+  border: 1px solid #e1eaf1;
+  border-radius: 50%;
+  background: #f6f9fb;
+  color: #40576c;
+  cursor: pointer;
+  font-size: 1.45rem;
+  line-height: 1;
+}
+
+.services-modal-close:hover {
+  background: #eaf5fc;
+}
+
+.services-modal-close:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.services-modal-description {
+  margin: 11px 0 20px;
+  color: var(--services-muted);
+  font-size: 0.88rem;
+  line-height: 1.6;
+}
+
+.services-form {
+  display: grid;
+  gap: 14px;
+}
+
+.services-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 13px;
+}
+
+.services-form label {
+  display: grid;
+  min-width: 0;
+  gap: 6px;
+  color: var(--services-text);
+  font-size: 0.8rem;
+  font-weight: 650;
+}
+
+.services-form input,
+.services-form select,
+.services-form textarea {
+  width: 100%;
+  min-width: 0;
+  padding: 10px 11px;
+  border: 1px solid #d7e1e9;
+  border-radius: 7px;
+  background: #fff;
+  color: var(--services-text);
+  font: inherit;
+  font-size: 0.87rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.services-form select {
+  color: #17324d;
+}
+
+.services-form select option {
+  background: #fff;
+  color: #17324d;
+}
+
+.services-form select option:disabled {
+  color: #8191a0;
+}
+
+.services-form input:focus,
+.services-form select:focus,
+.services-form textarea:focus {
+  border-color: #3988bd;
+  outline: 3px solid rgba(57, 136, 189, 0.15);
+}
+
+.services-form textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.services-optional {
+  color: #8191a0;
+  font-size: 0.72rem;
+  font-weight: 400;
+}
+
+.services-submit {
+  width: 100%;
+  min-height: 48px;
+}
+
+.services-submit:disabled {
+  cursor: wait;
+  opacity: 0.7;
+}
+
+.services-success,
+.services-error {
+  margin: 0;
+  padding: 11px 13px;
+  border-radius: 7px;
+  font-size: 0.84rem;
+  line-height: 1.5;
+}
+
+.services-success {
+  background: #edf8f2;
+  color: #216c4e;
+}
+
+.services-error {
+  background: #fff1f0;
+  color: #a13832;
+}
+
+@media (max-width: 650px) {
+  .services-page {
+    padding: 42px 20px 58px;
+  }
+
+  .services-grid {
+    max-width: 500px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+  }
+
+  .service-card {
+    min-height: 0;
+    padding: 24px;
+  }
+
+  .service-card > p {
+    margin-bottom: 19px;
+  }
+}
+
+@media (max-width: 460px) {
+  .services-page {
+    padding-right: 16px;
+    padding-left: 16px;
+  }
+
+  .service-card {
+    padding: 21px;
+  }
+
+  .services-modal-overlay {
+    padding: 10px;
+    place-items: end center;
+  }
+
+  .services-modal {
+    max-height: 94vh;
+    padding: 22px 18px;
+    border-radius: 14px;
+  }
+
+  .services-form-row {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}
