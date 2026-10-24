@@ -7,8 +7,8 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="logo-icon">
-        <Link to="/">
-          <img src="/logo.png" alt="Logo" />
+        <Link to="/" onClick={() => setMenuOpen(false)}>
+          <img src={`${import.meta.env.BASE_URL}logo.png`} alt="Logo" />
         </Link>
       </div>
       <button className="menu-toggle" onClick={() => setMenuOpen(!menuOpen)}>
@@ -16,9 +16,9 @@ const Navbar = () => {
       </button>
       {/* Menu */}
       <div className={`nav-links ${menuOpen ? "open" : ""}`}>
-        <a href="/services">Services</a>
-        <a href="/about">About Us</a>
-        <a href="/contact">Contact</a>
+        <Link to="/services" onClick={() => setMenuOpen(false)}>Services</Link>
+        <Link to="/about" onClick={() => setMenuOpen(false)}>About Us</Link>
+        <Link to="/contact" onClick={() => setMenuOpen(false)}>Contact</Link>
       </div>
     </nav>
   );

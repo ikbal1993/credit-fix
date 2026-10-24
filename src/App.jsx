@@ -29,7 +29,7 @@ function PageFooter() {
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={import.meta.env.BASE_URL.replace(/\/$/, "") || "/"}>
       <ScrollToTop />
       <div className="app-shell">
         <Navbar />

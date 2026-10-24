@@ -70,7 +70,7 @@ function Home() {
         </div>
         <img
           className="home-credit-illustration"
-          src="/CreditScore-img.gif"
+          src={`${import.meta.env.BASE_URL}CreditScore-img.gif`}
           alt="Animated illustration about checking and improving a credit score"
         />
         <Link className="getcredit" to="/services">
@@ -89,7 +89,7 @@ function Home() {
               aria-label="Person reviewing a low credit score report">
               <img
                 className="worry-image"
-                src="/worry-man.png"
+                src={`${import.meta.env.BASE_URL}worry-man.png`}
                 alt="A person concerned while checking a low CIBIL score"
               />
             </div>
@@ -109,7 +109,7 @@ function Home() {
             >
               <img
                 className="worry-image"
-                src="/business-image.png"
+                src={`${import.meta.env.BASE_URL}business-image.png`}
                 alt="business impacted due to low CIBIL score"
               />
             </div>
